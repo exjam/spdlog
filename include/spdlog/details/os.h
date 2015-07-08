@@ -178,17 +178,7 @@ inline int utc_minutes_offset(const std::tm& tm = details::os::localtime())
 
 //Return current thread id as size_t
 //It exists because the std::this_thread::get_id() is much slower(espcially under VS 2013)
-inline size_t thread_id()
-{
-#ifdef _WIN32
-    return  static_cast<size_t>(::GetCurrentThreadId());
-#elif __linux__
-    return  static_cast<size_t>(syscall(SYS_gettid));
-#else //Default to standard C++11 (OSX and other Unix)
-    return static_cast<size_t>(std::hash<std::thread::id>()(std::this_thread::get_id()));
-#endif
-
-}
+size_t thread_id();
 
 } //os
 } //details
