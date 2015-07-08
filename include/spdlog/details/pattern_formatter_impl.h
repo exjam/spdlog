@@ -354,7 +354,7 @@ class t_formatter :public flag_formatter
 {
     void format(details::log_msg& msg, const std::tm&) override
     {
-        msg.formatted << msg.thread_id;
+        msg.formatted << fmt::hexu(msg.thread_id);
     }
 };
 
