@@ -76,7 +76,7 @@ void set_sync_mode();
 //
 // Create and register multi/single threaded rotating file logger
 //
-std::shared_ptr<logger> rotating_logger_mt(const std::string& logger_name, const std::string& filename, size_t max_file_size, size_t max_files, bool force_flush = false);
+std::shared_ptr<logger> rotating_logger_mt(const std::string& logger_name, const std::string& filenameB, size_t max_file_size, size_t max_files, bool force_flush = false);
 std::shared_ptr<logger> rotating_logger_st(const std::string& logger_name, const std::string& filename, size_t max_file_size, size_t max_files, bool force_flush = false);
 
 //
@@ -112,7 +112,7 @@ std::shared_ptr<logger> create(const std::string& logger_name, const It& sinks_b
 // Create and register a logger with templated sink type
 // Example: spdlog::create<daily_file_sink_st>("mylog", "dailylog_filename", "txt");
 template <typename Sink, typename... Args>
-std::shared_ptr<spdlog::logger> create(const std::string& logger_name, const Args&...);
+std::shared_ptr<spdlog::logger> create(const std::string& logger_name, Args&...);
 
 
 // Register the given logger with the given name

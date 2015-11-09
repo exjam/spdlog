@@ -3,7 +3,7 @@
 Very fast, header only, C++ logging library. [![Build Status](https://travis-ci.org/gabime/spdlog.svg?branch=master)](https://travis-ci.org/gabime/spdlog)
 
 ## Install
-Just copy the files to your build tree and use a C++11 compiler
+Just copy the source [folder](https://github.com/gabime/spdlog/tree/master/include/spdlog) to your build tree and use a C++11 compiler
 
 ## Platforms
  * Linux (gcc 4.8.1+, clang 3.5+)
@@ -17,7 +17,7 @@ Just copy the files to your build tree and use a C++11 compiler
 * Feature rich [call style](#usage-example) using the excellent [cppformat](http://cppformat.github.io/) library.
 * ostream call style is supported too.
 * Extremely fast asynchronous mode (optional) - using lockfree queues and other tricks to reach millions of calls/sec.
-* [Custom](https://github.com/gabime/spdlog/wiki/Custom-formatting) formatting.
+* [Custom](https://github.com/gabime/spdlog/wiki/3.-Custom-formatting) formatting.
 * Multi/Single threaded loggers.
 * Various log targets:
     * Rotating log files.
