@@ -1,3 +1,6 @@
+/*
+ * This content is released under the MIT License as specified in https://raw.githubusercontent.com/gabime/spdlog/master/LICENSE
+ */
 #include "includes.h"
 
 static std::string file_contents(const std::string& filename)
@@ -52,7 +55,7 @@ TEST_CASE("simple_file_logger", "[simple_logger]]")
     auto logger = spdlog::create<spdlog::sinks::simple_file_sink_mt>("logger", filename);
     logger->set_pattern("%v");
 
-    
+
     logger->info("Test message {}", 1);
     logger->info("Test message {}", 2);
     logger->flush();
